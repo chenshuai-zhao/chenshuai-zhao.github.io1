@@ -1,2 +1,1 @@
 windows 777.txt
-linux  777.txt
