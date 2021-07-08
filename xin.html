@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>心形</title>
+</head>
+
+<body>
+<script type="text/javascript">
+
+function lovePrint(){
+		var input="*";
+		var txt=document.getElementById('txt');
+		if(txt.value!="")
+		{
+			input=txt.value;
+		}
+		if(txt.value.length>1)
+		{
+			txt.value=txt.value.toString().substring(0,1);
+			input=txt.value;
+			
+		}
+
+		var arr = [ 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1,
+				0, 0, 1, 1, 4, 5, 2, 3, 4, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0,
+				1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
+
+		var  str="";
+
+		for (var i = 0; i < arr.length; i++) {
+
+			if (i % 7 == 0)
+				str+="&nbsp;&nbsp;<br>";
+
+			if (arr[i] == 0)
+
+				str+="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+
+			else if (arr[i] == 4)
+				str+="&nbsp;&nbsp;&nbsp;&nbsp;";
+
+			else if (arr[i] == 5)
+
+				str+="&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;&nbsp;";
+
+			else if (arr[i] == 2)
+
+				str+="Love";
+			else if (arr[i] == 3)
+				str+="You";
+
+			else
+
+				str+="&nbsp;&nbsp;&nbsp;&nbsp;" + input;
+
+		}
+		
+		document.getElementById('divShow').innerHTML=str;
+		
+		
+		
+
+}
+</script>
+<div>
+  <input type="text"  id="txt" size="1"  value="*"/>
+  <button id="btn" onClick="lovePrint('*')">产生心形</button>
+  <span style="color:red; font-weight:bolder">(只限输入一个字符)</span> </div>
+<div id="divShow"> </div>
+</body>
+</html>
