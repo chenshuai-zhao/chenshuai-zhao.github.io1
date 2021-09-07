@@ -1,4 +1,4 @@
-## 重启服务
+## brew
 - 安装服务
 brew services install redis
 - 停止服务
