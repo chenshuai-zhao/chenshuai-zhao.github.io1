@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js
+"></script>
+	</head>
+	<body>
+		<div id="wxqrcode"></div>
+		
+		<script type="text/javascript">
+		var obj = new WxLogin({
+		 self_redirect:true,
+		 id:"wxqrcode", 
+		 appid: "", 
+		 scope: "snsapi_login", 
+		 redirect_uri: "http%3A%2F%2Falicc.cc",
+		 state: "",
+		 style: "",
+		 href: ""
+		 });
+		</script>
+	</body>
+</html>
